@@ -81,5 +81,5 @@ f(256:256+6,256:256+6)=psf;%tamaño de 7 pixeles
 imshow(f,[]);
 MTF=abs(fft2(f));
 figure(2);
-imshow(MTF,[]);
+%imshow(MTF,[]);
 
