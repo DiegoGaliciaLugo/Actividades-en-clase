@@ -72,3 +72,14 @@ imshow(fftshift(log(abs(F))),[])
 
 subplot(2,2,3);
 imshow(fftshift((abs(F))),[])
+
+%%
+psf=fspecial('disk',3);
+imshow(psf,[]);
+f=zeros(512);%Tamaño de img de 512
+f(256:256+6,256:256+6)=psf;%tamaño de 7 pixeles
+imshow(f,[]);
+MTF=abs(fft2(f));
+figure(2);
+imshow(MTF,[]);
+
